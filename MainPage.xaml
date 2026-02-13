@@ -4,25 +4,28 @@
              xmlns:models="clr-namespace:SDC440_3._3PA.Models"
              x:Class="SDC440_3._3PA.MainPage">
 
+    <!-- ScrollView lets the screen scroll on smaller devices -->
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="16">
 
-            <!-- Title -->
+            <!-- App title with your name -->
             <Label
                 Text="David Owens - Item Tracker"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
+            <!-- Instruction line -->
             <Label
                 Text="Please provide the following information:"
                 FontAttributes="Italic" />
 
-            <!-- Form -->
+            <!-- Grid used to line up labels and entry fields -->
             <Grid RowDefinitions="Auto,Auto,Auto"
                   ColumnDefinitions="Auto,*"
                   RowSpacing="12"
                   ColumnSpacing="12">
 
+                <!-- Item ID -->
                 <Label Grid.Row="0" Grid.Column="0"
                        Text="Item ID"
                        VerticalTextAlignment="Center"
@@ -33,6 +36,7 @@
                        Placeholder="Enter item id"
                        Keyboard="Numeric" />
 
+                <!-- Item Name -->
                 <Label Grid.Row="1" Grid.Column="0"
                        Text="Item Name"
                        VerticalTextAlignment="Center"
@@ -42,6 +46,7 @@
                        x:Name="txtItemName"
                        Placeholder="Enter item name" />
 
+                <!-- Item Description -->
                 <Label Grid.Row="2" Grid.Column="0"
                        Text="Item Description"
                        VerticalTextAlignment="Center"
@@ -52,31 +57,36 @@
                        Placeholder="Enter item description" />
             </Grid>
 
+            <!-- Save button calls OnSaveClicked in MainPage.xaml.cs -->
             <Button
                 x:Name="btnSave"
                 Text="Save"
                 HorizontalOptions="Center"
                 Clicked="OnSaveClicked" />
 
-            <!-- List -->
+            <!-- List of items pulled from SQLite (ItemsSource binds to Items collection) -->
             <CollectionView
                 VerticalOptions="Fill"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
+                    <!-- Strongly typed template so bindings are checked at compile time -->
                     <DataTemplate x:DataType="models:Item">
                         <Grid ColumnDefinitions="Auto,*,*"
                               Padding="12"
                               ColumnSpacing="12">
 
+                            <!-- Show ItemId -->
                             <Label Text="{Binding ItemId}"
                                    VerticalTextAlignment="Center" />
 
+                            <!-- Show ItemName -->
                             <Label Grid.Column="1"
                                    Text="{Binding ItemName}"
                                    VerticalTextAlignment="Center" />
 
+                            <!-- Show ItemDescription -->
                             <Label Grid.Column="2"
                                    Text="{Binding ItemDescription}"
                                    VerticalTextAlignment="Center" />
