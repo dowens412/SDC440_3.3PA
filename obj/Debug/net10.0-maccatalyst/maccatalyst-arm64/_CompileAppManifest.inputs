@@ -1,0 +1,22 @@
+AppBundleName=SDC440_3.3PA
+ApplicationDisplayVersion=1.0
+ApplicationId=com.companyname.sdc440_3.3pa
+ApplicationTitle=SDC440_3.3PA
+ApplicationVersion=1
+AppManifest=Platforms/MacCatalyst/Info.plist
+CompiledAppManifest=obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/AppManifest.plist
+DefaultSdkVersion=26.2
+FontFilesToRegister=
+GenerateApplicationManifest=true
+IsAppExtension=false
+MinSupportedOSPlatformVersion=15.0
+PartialAppManifests=obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/resizetizer/f/MauiInfo.plist
+ProjectDir=/Users/dowens/Documents/SDC440/Week 3/3.3 PA/SDC440_3.3PA
+ResourcePrefix=Platforms/MacCatalyst/Resources
+ResourceRules=
+SdkIsSimulator=False
+SdkVersion=26.2
+SupportedOSPlatformVersion=15.0
+TargetArchitectures=ARM64
+TargetFrameworkMoniker=.NETCoreApp,Version=v10.0,Profile=maccatalyst
+Validate=true

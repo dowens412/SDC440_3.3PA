@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/dowens/Documents/SDC440/Week 3/3.3 PA/SDC440_3.3PA/obj/Debug/net10.0-ios/iossimulator-arm64/Entitlements.xcent /Users/dowens/Documents/SDC440/Week 3/3.3 PA/SDC440_3.3PA/bin/Debug/net10.0-ios/iossimulator-arm64/SDC440_3.3PA.app

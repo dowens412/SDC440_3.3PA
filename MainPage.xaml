@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:SDC440_3._3PA.Models"
+             x:Class="SDC440_3._3PA.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="16">
+
+            <!-- Title -->
+            <Label
+                Text="David Owens - Item Tracker"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Please provide the following information:"
+                FontAttributes="Italic" />
+
+            <!-- Form -->
+            <Grid RowDefinitions="Auto,Auto,Auto"
+                  ColumnDefinitions="Auto,*"
+                  RowSpacing="12"
+                  ColumnSpacing="12">
+
+                <Label Grid.Row="0" Grid.Column="0"
+                       Text="Item ID"
+                       VerticalTextAlignment="Center"
+                       SemanticProperties.HeadingLevel="Level2" />
+
+                <Entry Grid.Row="0" Grid.Column="1"
+                       x:Name="txtItemId"
+                       Placeholder="Enter item id"
+                       Keyboard="Numeric" />
+
+                <Label Grid.Row="1" Grid.Column="0"
+                       Text="Item Name"
+                       VerticalTextAlignment="Center"
+                       SemanticProperties.HeadingLevel="Level2" />
+
+                <Entry Grid.Row="1" Grid.Column="1"
+                       x:Name="txtItemName"
+                       Placeholder="Enter item name" />
+
+                <Label Grid.Row="2" Grid.Column="0"
+                       Text="Item Description"
+                       VerticalTextAlignment="Center"
+                       SemanticProperties.HeadingLevel="Level2" />
+
+                <Entry Grid.Row="2" Grid.Column="1"
+                       x:Name="txtItemDescription"
+                       Placeholder="Enter item description" />
+            </Grid>
+
+            <Button
+                x:Name="btnSave"
+                Text="Save"
+                HorizontalOptions="Center"
+                Clicked="OnSaveClicked" />
+
+            <!-- List -->
+            <CollectionView
+                VerticalOptions="Fill"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Item">
+                        <Grid ColumnDefinitions="Auto,*,*"
+                              Padding="12"
+                              ColumnSpacing="12">
+
+                            <Label Text="{Binding ItemId}"
+                                   VerticalTextAlignment="Center" />
+
+                            <Label Grid.Column="1"
+                                   Text="{Binding ItemName}"
+                                   VerticalTextAlignment="Center" />
+
+                            <Label Grid.Column="2"
+                                   Text="{Binding ItemDescription}"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

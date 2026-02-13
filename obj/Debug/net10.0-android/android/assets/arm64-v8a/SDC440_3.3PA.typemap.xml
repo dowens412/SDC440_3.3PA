@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="SDC440_3.3PA" mvid="405411f2c6ef4a0ea0e042e670b2a0dd">
+  <java-to-managed>
+    <entry java-name="crc64a375cf511189fb51/MainActivity" managed-name="SDC440_3._3PA.MainActivity, SDC440_3.3PA" managed-type-token-id="33554441" />
+    <entry java-name="crc64a375cf511189fb51/MainApplication" managed-name="SDC440_3._3PA.MainApplication, SDC440_3.3PA" managed-type-token-id="33554442" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64a375cf511189fb51/MainActivity" managed-name="SDC440_3._3PA.MainActivity, SDC440_3.3PA" managed-type-token-id="33554441" />
+    <entry java-name="crc64a375cf511189fb51/MainApplication" managed-name="SDC440_3._3PA.MainApplication, SDC440_3.3PA" managed-type-token-id="33554442" />
+  </managed-to-java>
+</api>
